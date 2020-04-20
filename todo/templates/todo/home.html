@@ -1,0 +1,18 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+<br />
+<br />
+<br />
+<br />
+<br />
+<h1 style="font-size:50px"> <b> WELCOME!! </b> </h1>
+<p style="font-size:30px"><i> Life can be really stressful and boring if you don't know what to do at what time.<br> So, I, Yash Rao, freshman at VIT-Uni, have created a one stop shop for listing your daily activities so you can plan out every move and live life to the fullest!
+  <br /><b>Thanks for visiting!!</b></p></i>
+{% if user.is_authenticated %}
+<a role="button" class="btn btn-primary btn-dark" href="{% url 'createtodo' %}">Create To-Dos</a>
+
+{% else %}
+<a role="button" class="btn btn-primary btn-dark" href="{% url 'signupuser' %}">Get Started by Signing Up</a>
+{% endif %}
+{% endblock %}
